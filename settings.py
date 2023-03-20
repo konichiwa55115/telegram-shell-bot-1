@@ -1,6 +1,6 @@
 import os
 
-TOKEN = os.environ.get("TELEGRAM_API_TOKEN", '5714654934:AAH0p16rz-w-wRuEUYu9KCBLrfqlEIITrB0')
+TOKEN = os.environ.get("TELEGRAM_API_TOKEN", '5782497998:AAHvLkXYL3y2ZJpHXgtiKXi_nFQ9J4hr_LQ')
 
 PORT = int(os.environ.get("PORT", "8443"))
 HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", "telegram-shell-bot")
