@@ -294,17 +294,8 @@ def main():
         dp.add_handler(MessageHandler(Filters.text, do_exec, run_async=True))
 
     dp.add_error_handler(error)
-    if settings.IS_HEROKU:
-        updater.start_webhook(
-            listen="0.0.0.0",
-            port=settings.PORT,
-            url_path=settings.TOKEN,
-            webhook_url="https://{}.herokuapp.com/{}".format(
-                settings.HEROKU_APP_NAME, settings.TOKEN
-            ),
-        )
-    else:
-        updater.start_polling()
+
+    updater.start_polling()
     logger.info("Telegram shell bot started.")
     updater.idle()
 
